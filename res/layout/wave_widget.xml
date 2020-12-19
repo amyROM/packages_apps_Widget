@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextClock
+        android:id="@+id/date"
+        style="@style/ClockElement"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="7dp"
+        android:fontFamily="sans-serif-regular"
+        android:format12Hour="EE, MMM d"
+        android:format24Hour="EE, MMM d"
+        android:lines="1"
+        android:textAllCaps="true"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tagline"
+        style="@style/TagLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="7dp"
+        android:fontFamily="sans-serif-regular"
+        android:singleLine="true"
+        android:text="NEVER BETTER"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="15dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tagline"
+        android:layout_marginStart="5dp">
+
+        <TextClock
+            android:id="@+id/clock_hour"
+            style="@style/ClockElement"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:format12Hour="hh"
+            android:format24Hour="HH"
+            android:textSize="43dp" />
+
+        <ImageView
+            android:id="@+id/colon"
+            android:layout_width="15dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/clock_hour"
+            android:src="@drawable/colon" />
+
+        <TextClock
+            android:id="@+id/clock_minute"
+            style="@style/ClockElement"
+            android:layout_toEndOf="@+id/colon"
+            android:format12Hour="mm"
+            android:format24Hour="mm"
+            android:textSize="43dp" />
+    </RelativeLayout>
+</RelativeLayout>

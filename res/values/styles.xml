@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ClockElement">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:shadowColor">#66000000</item>
+        <item name="android:shadowDy">5.25</item>
+        <item name="android:shadowRadius">6</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TagLine">
+        <item name="android:shadowColor">#66000000</item>
+        <item name="android:shadowDy">5.25</item>
+        <item name="android:shadowRadius">6</item>
+    </style>
+</resources>
