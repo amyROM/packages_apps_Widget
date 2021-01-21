@@ -15,10 +15,10 @@
         android:format24Hour="EE, MMM d"
         android:lines="1"
         android:textAllCaps="true"
-        android:textSize="15dp" />
+        android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/tagline"
+        android:id="@+id/tag_line"
         style="@style/TagLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,15 +27,15 @@
         android:layout_marginStart="7dp"
         android:fontFamily="sans-serif-regular"
         android:singleLine="true"
-        android:text="NEVER BETTER"
+        android:text="@string/never_better"
         android:textAllCaps="true"
         android:textColor="@android:color/white"
-        android:textSize="15dp" />
+        android:textSize="15sp" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tagline"
+        android:layout_below="@+id/tag_line"
         android:layout_marginStart="5dp">
 
         <TextClock
@@ -45,7 +45,7 @@
             android:layout_alignParentStart="true"
             android:format12Hour="hh"
             android:format24Hour="HH"
-            android:textSize="43dp" />
+            android:textSize="43sp" />
 
         <ImageView
             android:id="@+id/colon"
@@ -53,6 +53,7 @@
             android:layout_height="45dp"
             android:layout_centerInParent="true"
             android:layout_toEndOf="@+id/clock_hour"
+            android:contentDescription="@string/colon_desc"
             android:src="@drawable/colon" />
 
         <TextClock
@@ -61,6 +62,6 @@
             android:layout_toEndOf="@+id/colon"
             android:format12Hour="mm"
             android:format24Hour="mm"
-            android:textSize="43dp" />
+            android:textSize="43sp" />
     </RelativeLayout>
 </RelativeLayout>
