@@ -1,8 +1,11 @@
 package me.waveproject.widget
 
+import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
+import android.content.ComponentName
 import android.content.Context
+import android.content.Intent
 import android.widget.RemoteViews
 
 /**
@@ -30,6 +33,18 @@ class WaveWidgetProvider : AppWidgetProvider() {
 
             // Construct the RemoteViews object
             val views = RemoteViews(context.packageName, R.layout.wave_widget)
+
+            val clockPackage = "com.android.deskclock"
+            val clockClass = "com.android.deskclock.DeskClock"
+            val clockIntent = Intent(Intent.ACTION_MAIN)
+                    .addCategory(Intent.CATEGORY_LAUNCHER)
+                    .setComponent(ComponentName(
+                            clockPackage,
+                            clockClass)
+                    )
+            val pendingIntent = PendingIntent.getActivity(context, 0, clockIntent, 0)
+            // Open clock app on click
+            views.setOnClickPendingIntent(R.id.wave_widget, pendingIntent)
 
             // Instruct the widget manager to update the widget
             appWidgetManager.updateAppWidget(appWidgetId, views)
